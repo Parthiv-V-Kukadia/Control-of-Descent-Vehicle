@@ -1,0 +1,42 @@
+% NOTE: You should not have to change anything in this file!
+\ProvidesPackage{dmasproject}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{csquotes}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{float}
+\usepackage{color}
+\usepackage{appendix}
+\usepackage{booktabs}
+\usepackage{etex}
+\usepackage{microtype}
+\usepackage{geometry}
+\geometry{includeheadfoot,margin=2cm}
+\usepackage{graphicx}
+\usepackage[pdfborder={0 0 0},pdfusetitle]{hyperref}
+\usepackage{doi}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.16}
+
+\usepackage[
+  backend=biber,
+  style=alphabetic,
+  natbib=true,
+  url=true,
+  maxcitenames=9,
+  maxbibnames=9,
+  abbreviate=false,
+  eprint=true,
+  doi=true
+]{biblatex}
+
+% Remove the "URL: " prefix
+\DeclareFieldFormat{url}{\url{#1}}
+
+% Crossref Display Guidelines (March 2017), retrieved 2020-09-14, https://doi.org/10.13003/5jchdy
+\DeclareFieldFormat{doi}{\url{https://doi.org/#1}}
+
+\addbibresource{references.bib}
